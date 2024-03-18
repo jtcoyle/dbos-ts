@@ -1,3 +1,4 @@
+
 # DBOS Hello
 
 This is a [DBOS app](https://docs.dbos.dev/) bootstrapped with `npx @dbos-inc/dbos-sdk init`.
@@ -5,11 +6,26 @@ This is a [DBOS app](https://docs.dbos.dev/) bootstrapped with `npx @dbos-inc/db
 ## Getting Started
 
 Before you can launch your app, you need a database.
-DBOS works with any Postgres database, but to make things easier, we've provided a script that starts a Docker Postgres container and creates a database:
+DBOS works with any Postgres database, but to make things easier, we've provided a script that starts a Docker Postgres container and creates a database.
+On Linux or Mac, run:
 
 ```bash
 export PGPASSWORD=dbos
 ./start_postgres_docker.sh
+```
+
+On Windows (cmd), run:
+
+```cmd
+set PGPASSWORD=dbos
+start_postgres_docker.bat
+```
+
+On Windows (PS), run:
+
+```cmd
+$env:PGPASSWORD = "dbos"
+.\start_postgres_docker.bat
 ```
 
 If successful, the script should print `Database started successfully!`.
